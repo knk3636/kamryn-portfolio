@@ -1,7 +1,17 @@
+import React from "react";
+
 const styles = {
+  divider: {
+    height: 24,
+    maxWidth: 1180,
+    margin: "0 auto",
+    background: "linear-gradient(180deg, rgba(148,163,184,0.15), rgba(148,163,184,0.05), transparent)",
+    borderRadius: 999,
+    filter: "blur(0.2px)",
+  },
   page: {
     minHeight: "100vh",
-    background: "linear-gradient(180deg, #f8fafc 0%, #eef4ff 100%)",
+    background: "linear-gradient(180deg, #fffaf6 0%, #f6f1ff 52%, #eef7ff 100%)",
     color: "#0f172a",
     fontFamily:
       "Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
@@ -11,7 +21,7 @@ const styles = {
     top: 0,
     zIndex: 20,
     borderBottom: "1px solid rgba(226,232,240,.9)",
-    background: "rgba(248,250,252,.92)",
+    background: "rgba(255,250,246,.9)",
     backdropFilter: "blur(12px)",
   },
   nav: {
@@ -54,7 +64,7 @@ const styles = {
     width: 148,
     height: 148,
     borderRadius: "9999px",
-    background: "linear-gradient(135deg, #dbeafe, #e2e8f0)",
+    background: "linear-gradient(135deg, #f9d7e4, #ddd6fe)",
     margin: "0 auto",
     border: "5px solid white",
     boxShadow: "0 20px 50px rgba(15,23,42,.12)",
@@ -63,14 +73,6 @@ const styles = {
     justifyContent: "center",
     color: "#475569",
     overflow: "hidden",
-  },
-  avatarImage: {
-    width: "100%",
-    height: "100%",
-    objectFit: "cover",
-    objectPosition: "center 20%",
-    transform: "scale(1.02)",
-    display: "block",
   },
   heroTitle: {
     marginTop: 24,
@@ -107,38 +109,44 @@ const styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    background: "white",
-    border: "1px solid #e2e8f0",
-    boxShadow: "0 8px 24px rgba(15,23,42,.06)",
-    color: "#334155",
+    background: "rgba(255,255,255,.88)",
+    border: "1px solid #eadff4",
+    boxShadow: "0 10px 24px rgba(91,75,138,.08)",
+    color: "#5b4b8a",
     textDecoration: "none",
   },
   section: {
     maxWidth: 1180,
     margin: "0 auto",
-    padding: "24px",
+    padding: "24px 24px 8px",
+    textAlign: "center",
   },
   sectionTitle: {
     fontSize: 34,
     fontWeight: 800,
     letterSpacing: "-.03em",
     margin: 0,
+    textAlign: "center",
   },
   sectionLead: {
     marginTop: 12,
     color: "#475569",
     maxWidth: 760,
+    marginInline: "auto",
     lineHeight: 1.8,
     fontSize: 16,
+    textAlign: "center",
   },
   projectsGrid: {
+    justifyContent: "center",
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-    gap: 18,
+    gridTemplateColumns: "repeat(4, minmax(0, 1fr))",
+    gap: 16,
     marginTop: 18,
+    alignItems: "start",
   },
   projectCard: {
-    padding: 18,
+    padding: 16,
     borderRadius: 20,
     border: "1px solid #e2e8f0",
     background: "white",
@@ -153,8 +161,8 @@ const styles = {
   projectTag: {
     display: "inline-block",
     padding: "6px 10px",
-    background: "#e0f2fe",
-    color: "#0369a1",
+    background: "#f7dce7",
+    color: "#9d3f6b",
     borderRadius: 999,
     fontSize: 12,
     fontWeight: 700,
@@ -177,12 +185,12 @@ const styles = {
     width: 40,
     height: 40,
     borderRadius: 12,
-    background: "#eff6ff",
-    border: "1px solid #dbeafe",
+    background: "#f3ecff",
+    border: "1px solid #e2d6ff",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    color: "#2563eb",
+    color: "#7c3aed",
     flexShrink: 0,
   },
   chips: {
@@ -200,8 +208,8 @@ const styles = {
     fontWeight: 700,
   },
   featuredWrap: {
-    marginTop: 22,
-    padding: 24,
+    marginTop: 18,
+    padding: 20,
     borderRadius: 24,
     border: "1px solid #dbe4f0",
     background: "rgba(255,255,255,.88)",
@@ -210,8 +218,8 @@ const styles = {
   featuredGrid: {
     marginTop: 18,
     display: "grid",
-    gridTemplateColumns: "1.1fr .9fr",
-    gap: 22,
+    gridTemplateColumns: "1fr",
+    gap: 16,
   },
   caseBlock: {
     padding: 22,
@@ -237,111 +245,6 @@ const styles = {
     lineHeight: 1.8,
     fontSize: 15,
     margin: 0,
-  },
-  mockShell: {
-    background: "linear-gradient(180deg, #0f172a 0%, #111827 100%)",
-    borderRadius: 28,
-    padding: 12,
-    boxShadow: "0 25px 60px rgba(15,23,42,.18)",
-  },
-  mockPhone: {
-    background: "#f8fafc",
-    borderRadius: 24,
-    minHeight: 640,
-    overflow: "hidden",
-    border: "1px solid rgba(255,255,255,.15)",
-  },
-  mockTop: {
-    padding: "18px 18px 10px",
-    background: "linear-gradient(180deg, #eff6ff 0%, #f8fafc 100%)",
-    borderBottom: "1px solid #e2e8f0",
-  },
-  mockPillRow: {
-    display: "flex",
-    gap: 8,
-    marginTop: 12,
-    flexWrap: "wrap",
-  },
-  mockPill: {
-    padding: "6px 10px",
-    borderRadius: 999,
-    background: "white",
-    border: "1px solid #dbeafe",
-    fontSize: 12,
-    fontWeight: 700,
-    color: "#2563eb",
-  },
-  mockContent: {
-    padding: 16,
-    display: "grid",
-    gap: 14,
-  },
-  mockCard: {
-    background: "white",
-    border: "1px solid #e2e8f0",
-    borderRadius: 20,
-    padding: 16,
-  },
-  mockTitle: {
-    fontWeight: 800,
-    fontSize: 16,
-  },
-  mockSub: {
-    marginTop: 4,
-    color: "#64748b",
-    fontSize: 13,
-  },
-  symptomRow: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    gap: 12,
-    marginTop: 12,
-  },
-  symptomScale: {
-    display: "flex",
-    gap: 6,
-  },
-  symptomDot: (active) => ({
-    width: 14,
-    height: 14,
-    borderRadius: 999,
-    background: active ? "#fb7185" : "#e2e8f0",
-  }),
-  timelineBlock: {
-    marginTop: 14,
-    display: "grid",
-    gap: 10,
-  },
-  timelineRow: {
-    display: "grid",
-    gridTemplateColumns: "56px 1fr",
-    gap: 12,
-    alignItems: "start",
-  },
-  timeLabel: {
-    fontSize: 12,
-    fontWeight: 700,
-    color: "#64748b",
-    paddingTop: 4,
-  },
-  timelineCard: {
-    background: "#f8fafc",
-    border: "1px solid #e2e8f0",
-    borderRadius: 16,
-    padding: 12,
-  },
-  insightBanner: {
-    marginTop: 10,
-    background: "linear-gradient(135deg, #ecfeff, #eef2ff)",
-    border: "1px solid #c7d2fe",
-    borderRadius: 16,
-    padding: 14,
-  },
-  insightHeadline: {
-    fontWeight: 800,
-    color: "#3730a3",
-    fontSize: 14,
   },
   skillsWrap: {
     marginTop: 18,
@@ -376,8 +279,95 @@ const styles = {
     fontSize: 15,
     wordBreak: "break-word",
   },
+  copyButton: {
+    marginTop: 10,
+    border: "1px solid #eadff4",
+    background: "#fff7fb",
+    color: "#9d3f6b",
+    borderRadius: 999,
+    padding: "8px 12px",
+    fontSize: 12,
+    fontWeight: 700,
+    cursor: "pointer",
+  },
+  visualCard: {
+    borderRadius: 18,
+    background: "white",
+    border: "1px solid #eadff4",
+    padding: 14,
+  },
   footerPad: {
-    height: 40,
+    height: 10,
+  },
+  modalOverlay: {
+    position: "fixed",
+    inset: 0,
+    background: "rgba(15, 23, 42, 0.45)",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 24,
+    zIndex: 50,
+  },
+  modalCard: {
+    width: "min(760px, 100%)",
+    maxHeight: "85vh",
+    overflowY: "auto",
+    background: "rgba(255,255,255,.98)",
+    border: "1px solid #eadff4",
+    borderRadius: 28,
+    boxShadow: "0 24px 80px rgba(15,23,42,.18)",
+    padding: 24,
+    textAlign: "left",
+  },
+  modalHeader: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "flex-start",
+    gap: 16,
+  },
+  modalClose: {
+    border: "1px solid #eadff4",
+    background: "white",
+    borderRadius: 999,
+    width: 38,
+    height: 38,
+    cursor: "pointer",
+    color: "#5b4b8a",
+    fontSize: 18,
+    fontWeight: 700,
+    lineHeight: 1,
+  },
+  modalGrid: {
+    marginTop: 18,
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr",
+    gap: 16,
+  },
+  modalSection: {
+    padding: 16,
+    borderRadius: 18,
+    border: "1px solid #eadff4",
+    background: "#fffafc",
+  },
+  modalSectionTitle: {
+    fontSize: 13,
+    fontWeight: 800,
+    letterSpacing: ".08em",
+    textTransform: "uppercase",
+    color: "#9d3f6b",
+    marginBottom: 8,
+  },
+  modalList: {
+    margin: 0,
+    paddingLeft: 18,
+    color: "#475569",
+    lineHeight: 1.7,
+    fontSize: 14,
+  },
+  clickableCard: {
+    cursor: "pointer",
+    transition: "transform .18s ease, box-shadow .18s ease",
   },
 };
 
@@ -410,13 +400,9 @@ function MailIcon({ size = 20 }) {
 
 function LinkedInIcon({ size = 20 }) {
   return (
-    <IconBase size={size}>
-      <path d="M5 9v10" />
-      <path d="M5 5h.01" />
-      <path d="M10 9v10" />
-      <path d="M10 13a3 3 0 0 1 6 0v6" />
-      <rect x="3" y="3" width="18" height="18" rx="3" />
-    </IconBase>
+    <svg viewBox="0 0 24 24" width={size} height={size} fill="currentColor" aria-hidden="true">
+      <path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3A2.03 2.03 0 0 0 3.2 5.03c0 1.1.9 2 2.02 2a2.02 2.02 0 1 0 .03-4.03ZM20.8 12.9c0-3.48-1.86-5.1-4.35-5.1-2 0-2.9 1.1-3.4 1.87V8.5H9.68c.04.78 0 11.5 0 11.5h3.37v-6.42c0-.34.03-.68.13-.92.27-.68.88-1.4 1.92-1.4 1.35 0 1.9 1.03 1.9 2.54V20H20.8v-7.1Z" />
+    </svg>
   );
 }
 
@@ -498,128 +484,24 @@ function SocialLink({ href, label, children }) {
   );
 }
 
-function AvatarImage() {
-  const [hasError, setHasError] = React.useState(false);
-
-  if (!PROFILE_IMAGE_SRC || hasError) {
-    return <UserIcon size={70} />;
-  }
-
-  return (
-    <img
-      src={PROFILE_IMAGE_SRC}
-      alt="Kamryn headshot"
-      style={styles.avatarImage}
-      onError={() => setHasError(true)}
-    />
-  );
-}
-
-function PhoneMock() {
-  return (
-    <div style={styles.mockShell}>
-      <div style={styles.mockPhone}>
-        <div style={styles.mockTop}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-            <div>
-              <div style={{ fontWeight: 800, fontSize: 20 }}>Digestly</div>
-              <div style={{ color: "#64748b", fontSize: 13, marginTop: 4 }}>
-                IBS-friendly symptom &amp; meal tracking
-              </div>
-            </div>
-            <div
-              style={{
-                width: 36,
-                height: 36,
-                borderRadius: 12,
-                background: "white",
-                border: "1px solid #dbeafe",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: "#2563eb",
-              }}
-            >
-              <SparklesIcon />
-            </div>
-          </div>
-          <div style={styles.mockPillRow}>
-            <div style={styles.mockPill}>Quick meal log</div>
-            <div style={styles.mockPill}>Symptom trends</div>
-            <div style={styles.mockPill}>Trigger insights</div>
-          </div>
-        </div>
-
-        <div style={styles.mockContent}>
-          <div style={styles.mockCard}>
-            <div style={styles.mockTitle}>Today&apos;s Check-In</div>
-            <div style={styles.mockSub}>Log your last meal and how you feel right now.</div>
-            <div style={styles.symptomRow}>
-              <div>
-                <div style={{ fontWeight: 700, fontSize: 14 }}>Bloating</div>
-                <div style={{ color: "#64748b", fontSize: 13, marginTop: 4 }}>Severity scale</div>
-              </div>
-              <div style={styles.symptomScale}>
-                {[1, 2, 3, 4, 5].map((num) => (
-                  <div key={num} style={styles.symptomDot(num <= 3)} />
-                ))}
-              </div>
-            </div>
-            <div style={styles.symptomRow}>
-              <div>
-                <div style={{ fontWeight: 700, fontSize: 14 }}>Meal tag</div>
-                <div style={{ color: "#64748b", fontSize: 13, marginTop: 4 }}>Lunch · pasta · dairy</div>
-              </div>
-              <div style={{ display: "flex", alignItems: "center", gap: 6, color: "#64748b", fontSize: 13 }}>
-                <ClockIcon size={14} /> 1:12 PM
-              </div>
-            </div>
-          </div>
-
-          <div style={styles.mockCard}>
-            <div style={styles.mockTitle}>Timeline</div>
-            <div style={styles.mockSub}>A simple way to connect meals and symptoms.</div>
-            <div style={styles.timelineBlock}>
-              <div style={styles.timelineRow}>
-                <div style={styles.timeLabel}>8:40</div>
-                <div style={styles.timelineCard}>
-                  <div style={{ fontWeight: 700 }}>Greek yogurt + coffee</div>
-                  <div style={{ color: "#64748b", fontSize: 13, marginTop: 4 }}>Tags: dairy, caffeine</div>
-                </div>
-              </div>
-              <div style={styles.timelineRow}>
-                <div style={styles.timeLabel}>11:30</div>
-                <div style={styles.timelineCard}>
-                  <div style={{ fontWeight: 700 }}>Symptoms begin</div>
-                  <div style={{ color: "#64748b", fontSize: 13, marginTop: 4 }}>Bloating 3/5 · cramps 2/5</div>
-                </div>
-              </div>
-              <div style={styles.timelineRow}>
-                <div style={styles.timeLabel}>2:15</div>
-                <div style={styles.timelineCard}>
-                  <div style={{ fontWeight: 700 }}>Trigger pattern noted</div>
-                  <div style={{ color: "#64748b", fontSize: 13, marginTop: 4 }}>
-                    Dairy appeared in 3 of last 4 flare days
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div style={styles.insightBanner}>
-            <div style={styles.insightHeadline}>Possible trigger detected: dairy</div>
-            <div style={{ color: "#4338ca", fontSize: 13, marginTop: 6, lineHeight: 1.6 }}>
-              Meals tagged with dairy appeared before recent symptoms 75% of the time. Consider watching portions and
-              timing.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+function AvatarIcon() {
+  return <UserIcon size={70} />;
 }
 
 export default function App() {
+  const [isIbsModalOpen, setIsIbsModalOpen] = React.useState(false);
+  const [emailCopied, setEmailCopied] = React.useState(false);
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText("kamrynkopchinski@gmail.com");
+      setEmailCopied(true);
+      window.setTimeout(() => setEmailCopied(false), 1800);
+    } catch (error) {
+      console.error("Failed to copy email", error);
+    }
+  };
+
   const project = {
     title: "IBS-Friendly Food Tracker",
     subtitle: "Personal Project · Health Product Concept",
@@ -645,14 +527,6 @@ export default function App() {
     "Certified ScrumMaster (CSM)",
     "Project Management Professional (PMP), exam scheduled June 2026",
   ];
-
-  const checks = {
-    hasAboutAnchor: true,
-    hasProjectsAnchor: true,
-    hasSkillsAnchor: true,
-    hasConnectAnchor: true,
-    hasProjectSkills: project.skills.length >= 4,
-  };
 
   const projectCards = [
     {
@@ -689,6 +563,16 @@ export default function App() {
     },
   ];
 
+  const checks = {
+    hasAboutAnchor: true,
+    hasProjectsAnchor: true,
+    hasSkillsAnchor: true,
+    hasConnectAnchor: true,
+    hasProjectSkills: project.skills.length >= 4,
+    hasProjectCards: projectCards.length >= 4,
+    hasModal: true,
+  };
+
   return (
     <div style={styles.page}>
       <div style={{ display: "none" }}>
@@ -697,7 +581,7 @@ export default function App() {
 
       <header style={styles.header}>
         <nav style={styles.nav}>
-          <div style={styles.navBrand}>Kamryn Portfolio</div>
+          <div style={styles.navBrand}>Portfolio</div>
           <div style={styles.navLinks}>
             <a href="#about" style={styles.navLink}>
               About
@@ -718,24 +602,20 @@ export default function App() {
       <section style={styles.container}>
         <div style={styles.hero}>
           <div style={styles.avatar}>
-            <AvatarImage />
+            <AvatarIcon />
           </div>
           <h1 style={styles.heroTitle}>Kamryn</h1>
           <p style={styles.heroSubtitle}>
-            <span style={{ fontWeight: 800, color: "#0f172a" }}>Product-Focused Systems Engineer @ Disney</span>
+            <span style={{ fontWeight: 800, color: "#1f2440" }}>Systems Engineer @ Disney, moving into Product</span>
           </p>
           <p style={styles.heroBlurb}>
-            I work at the intersection of product thinking and delivery, translating complex, ambiguous problems into
-            clear plans, aligned teams, and shipped outcomes. While my title is Systems Engineer, my day-to-day focuses
-            on prioritization, stakeholder alignment, and shaping solutions that create real user and business impact.
-            I&apos;m actively building toward a dedicated product role by pairing hands-on delivery experience with
-            structured product thinking.
+            I currently work in Disney technology, where a lot of my day-to-day sits between execution and product thinking. I enjoy translating complex and ambiguous initiatives into clear priorities, aligned stakeholders, and outcomes that are easy to understand and execute against. While my current title is Systems Engineer, I’m intentionally building toward product by showcasing how I think about users, structure ideas, and shape solutions.
           </p>
           <div style={styles.socialRow}>
-            <SocialLink href="mailto:yourname@email.com" label="Email">
+            <SocialLink href="mailto:kamrynkopchinski@gmail.com" label="Email">
               <MailIcon />
             </SocialLink>
-            <SocialLink href="https://www.linkedin.com" label="LinkedIn">
+            <SocialLink href="https://www.linkedin.com/in/kamryn-kopchinski-b944651b2" label="LinkedIn">
               <LinkedInIcon />
             </SocialLink>
             <SocialLink href="https://www.github.com" label="GitHub">
@@ -748,28 +628,52 @@ export default function App() {
       <section id="about" style={styles.section}>
         <h2 style={styles.sectionTitle}>About Me</h2>
         <p style={styles.sectionLead}>
-          I currently work within Disney technology, partnering across engineering and leadership to bring structure,
-          clarity, and momentum to complex work. A lot of what I enjoy most sits at the intersection of product
-          thinking, communication, and execution, taking something messy, understanding the real problem, and shaping
-          it into something more useful and easier to act on.
+          I currently work within Disney technology, partnering across engineering and leadership to bring structure, clarity, and momentum to complex work. A lot of what I enjoy most sits at the intersection of product thinking, communication, and execution, breaking down complex problems, identifying the underlying need, and shaping them into solutions that are more useful, actionable, and aligned across teams.
         </p>
         <p style={styles.sectionLead}>
-          I&apos;m especially drawn to digital products that feel thoughtful, intuitive, and genuinely supportive to the
-          people using them. This IBS-friendly tracker concept is one example of how I like to think: start with a real
-          user pain point, define the simplest valuable version, and then build from there.
+          I’m especially drawn to digital products that feel thoughtful, intuitive, and genuinely supportive to the people using them. This IBS-friendly tracker concept is one example of how I like to think: start with a real user pain point, define the simplest valuable version, and then build from there.
         </p>
       </section>
+
+      <div style={styles.divider} />
 
       <section id="projects" style={styles.section}>
         <h2 style={styles.sectionTitle}>Projects</h2>
         <p style={styles.sectionLead}>
-          A selection of product concepts and work samples. Each card is a quick preview, and I&apos;m happy to dive deeper
-          in conversation.
+          A selection of product concepts and work samples. Each card is a quick preview, and I’m happy to dive deeper in conversation.
         </p>
 
         <div style={styles.projectsGrid}>
           {projectCards.map((item) => (
-            <div key={item.id} style={styles.projectCard}>
+            <div
+              key={item.id}
+              style={{
+                ...styles.projectCard,
+                ...(item.id === "ibs" ? styles.clickableCard : {}),
+              }}
+              onClick={item.id === "ibs" ? () => setIsIbsModalOpen(true) : undefined}
+              onMouseEnter={(e) => {
+                if (item.id === "ibs") {
+                  e.currentTarget.style.transform = "translateY(-2px)";
+                  e.currentTarget.style.boxShadow = "0 18px 38px rgba(15,23,42,.08)";
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (item.id === "ibs") {
+                  e.currentTarget.style.transform = "translateY(0)";
+                  e.currentTarget.style.boxShadow = styles.projectCard.boxShadow;
+                }
+              }}
+              role={item.id === "ibs" ? "button" : undefined}
+              tabIndex={item.id === "ibs" ? 0 : undefined}
+              onKeyDown={(e) => {
+                if (item.id === "ibs" && (e.key === "Enter" || e.key === " ")) {
+                  e.preventDefault();
+                  setIsIbsModalOpen(true);
+                }
+              }}
+              aria-label={item.id === "ibs" ? "Open IBS project case study" : undefined}
+            >
               <div style={styles.projectTop}>
                 <span style={styles.projectTag}>{item.tag}</span>
                 <span style={styles.iconBadge}>{item.icon}</span>
@@ -783,58 +687,23 @@ export default function App() {
                   </span>
                 ))}
               </div>
+              {item.id === "ibs" && (
+                <div style={{ marginTop: 12, color: "#9d3f6b", fontSize: 13, fontWeight: 700 }}>
+                  Click to view mini case study
+                </div>
+              )}
             </div>
           ))}
         </div>
 
-        <div style={styles.featuredWrap}>
-          <div style={styles.projectTag}>{project.subtitle}</div>
-          <div style={{ ...styles.projectTitle, fontSize: 24 }}>{project.title}</div>
-          <div style={{ ...styles.projectText, fontSize: 15 }}>
-            An IBS-friendly food tracker designed to help users quickly log meals and symptoms, then uncover patterns
-            over time so they can make more confident daily decisions.
-          </div>
-          <div style={styles.chips}>
-            {project.skills.map((skill) => (
-              <span key={skill} style={styles.chip}>
-                {skill}
-              </span>
-            ))}
-          </div>
+        </section>
 
-          <div style={styles.featuredGrid}>
-            <div style={styles.caseBlock}>
-              <div style={styles.caseTitle}>Project blip</div>
-
-              <div style={{ marginTop: 12 }}>
-                <div style={styles.caseMiniLabel}>Problem</div>
-                <p style={styles.caseText}>{project.problem}</p>
-              </div>
-
-              <div style={{ marginTop: 12 }}>
-                <div style={styles.caseMiniLabel}>Target user</div>
-                <p style={styles.caseText}>{project.user}</p>
-              </div>
-
-              <div style={{ marginTop: 12 }}>
-                <div style={styles.caseMiniLabel}>What makes it valuable</div>
-                <p style={styles.caseText}>
-                  The value is not just in logging food. It&apos;s in helping users understand relationships between meals,
-                  timing, and symptoms so they can make more informed choices with less guesswork.
-                </p>
-              </div>
-            </div>
-
-            <PhoneMock />
-          </div>
-        </div>
-      </section>
+      <div style={styles.divider} />
 
       <section id="skills" style={styles.section}>
-        <h2 style={styles.sectionTitle}>Skills &amp; Certifications</h2>
+        <h2 style={styles.sectionTitle}>Skills & Certifications</h2>
         <p style={styles.sectionLead}>
-          These are some of the areas I&apos;ve built experience in through my current work, along with certifications that
-          support my product and delivery focus.
+          These are some of the areas I’ve built experience in through my current work, along with certifications that support my product and delivery focus.
         </p>
 
         <div style={styles.skillsCard}>
@@ -850,33 +719,58 @@ export default function App() {
         <div style={{ ...styles.skillsCard, marginTop: 16 }}>
           <div style={{ fontWeight: 800, marginBottom: 10 }}>Certifications</div>
           <div style={styles.skillsWrap}>
-            {certifications.map((cert) => (
-              <span key={cert} style={styles.chip}>
-                {cert}
+            {certifications.map((certification) => (
+              <span key={certification} style={styles.chip}>
+                {certification}
               </span>
             ))}
           </div>
         </div>
       </section>
 
+      <div style={styles.divider} />
+
       <section id="connect" style={styles.section}>
         <h2 style={styles.sectionTitle}>Connect</h2>
         <p style={styles.sectionLead}>
-          I&apos;m always happy to connect around product, digital experiences, and opportunities where strong execution and
-          thoughtful problem-solving come together.
+          I’m always happy to connect around product, digital experiences, and opportunities where strong execution and thoughtful problem-solving come together.
         </p>
         <div style={styles.connectGrid}>
           <div style={styles.connectCard}>
             <div style={{ display: "flex", alignItems: "center", gap: 10, fontWeight: 800 }}>
               <MailIcon /> Email
             </div>
-            <div style={styles.connectValue}>yourname@email.com</div>
+            <div style={styles.connectValue}>kamrynkopchinski@gmail.com</div>
+            <button type="button" style={styles.copyButton} onClick={handleCopyEmail}>
+              {emailCopied ? "Copied" : "Copy email"}
+            </button>
           </div>
           <div style={styles.connectCard}>
             <div style={{ display: "flex", alignItems: "center", gap: 10, fontWeight: 800 }}>
               <LinkedInIcon /> LinkedIn
             </div>
-            <div style={styles.connectValue}>Add your LinkedIn profile here</div>
+            <a
+              href="https://www.linkedin.com/in/kamryn-kopchinski-b944651b2"
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                ...styles.connectValue,
+                textDecoration: "none",
+                color: "#7c3aed",
+                fontWeight: 600,
+                transition: "all .18s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.textDecoration = "underline";
+                e.currentTarget.style.color = "#5b21b6";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.textDecoration = "none";
+                e.currentTarget.style.color = "#7c3aed";
+              }}
+            >
+              www.linkedin.com/in/kamryn-kopchinski-b944651b2
+            </a>
           </div>
           <div style={styles.connectCard}>
             <div style={{ display: "flex", alignItems: "center", gap: 10, fontWeight: 800 }}>
@@ -886,6 +780,127 @@ export default function App() {
           </div>
         </div>
       </section>
+
+      {isIbsModalOpen && (
+        <div style={styles.modalOverlay} onClick={() => setIsIbsModalOpen(false)}>
+          <div style={styles.modalCard} onClick={(e) => e.stopPropagation()}>
+            <div style={styles.modalHeader}>
+              <div>
+                <div style={styles.projectTag}>{project.subtitle}</div>
+                <div style={{ ...styles.projectTitle, marginTop: 12 }}>IBS-Friendly Food Tracker</div>
+                <div style={{ ...styles.projectText, fontSize: 15 }}>
+                  A compact case study showing how I’d think through a product rooted in a real user pain point.
+                </div>
+              </div>
+              <button
+                type="button"
+                style={styles.modalClose}
+                onClick={() => setIsIbsModalOpen(false)}
+                aria-label="Close case study"
+              >
+                ×
+              </button>
+            </div>
+
+            <div style={styles.modalGrid}>
+              <div style={styles.modalSection}>
+                <div style={styles.modalSectionTitle}>Problem</div>
+                <div style={styles.projectText}>
+                  Users with IBS often know they should track meals and symptoms, but most tracking flows are too heavy and do not help connect food, timing, and flare-ups in a simple way.
+                </div>
+              </div>
+
+              <div style={styles.modalSection}>
+                <div style={styles.modalSectionTitle}>Target user</div>
+                <div style={styles.projectText}>
+                  Young adults managing IBS who want a lightweight, less overwhelming way to spot food triggers and daily patterns.
+                </div>
+              </div>
+
+              <div style={styles.modalSection}>
+                <div style={styles.modalSectionTitle}>MVP</div>
+                <ul style={styles.modalList}>
+                  <li>Quick meal logging with simple tags</li>
+                  <li>Symptom tracking with timing and severity</li>
+                  <li>Timeline view to connect food and symptoms</li>
+                  <li>Basic trigger insights and weekly summaries</li>
+                </ul>
+              </div>
+
+              <div style={styles.modalSection}>
+                <div style={styles.modalSectionTitle}>Why it matters</div>
+                <div style={styles.projectText}>
+                  The value is not just logging. It is helping users feel less uncertain and giving them clearer signals about what may be affecting them.
+                </div>
+              </div>
+            </div>
+
+            <div style={{ ...styles.caseBlock, marginTop: 18 }}>
+              <div style={styles.caseTitle}>Product preview</div>
+              <div style={{ display: "grid", gap: 12, marginTop: 10 }}>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+                  <div style={styles.visualCard}>
+                    <div style={{ fontWeight: 800, fontSize: 15 }}>Home dashboard</div>
+                    <div style={{ color: "#7c5c7a", fontSize: 12, marginTop: 4 }}>See what to log next and which patterns are starting to stand out</div>
+                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, marginTop: 12 }}>
+                      <div style={{ borderRadius: 12, background: "#faf7ff", padding: 10 }}>
+                        <div style={{ fontSize: 11, color: "#7c5c7a" }}>Status</div>
+                        <div style={{ marginTop: 4, fontWeight: 800 }}>Stable</div>
+                      </div>
+                      <div style={{ borderRadius: 12, background: "#fff7fb", padding: 10 }}>
+                        <div style={{ fontSize: 11, color: "#7c5c7a" }}>Top trigger</div>
+                        <div style={{ marginTop: 4, fontWeight: 800 }}>Dairy</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style={styles.visualCard}>
+                    <div style={{ fontWeight: 800, fontSize: 15 }}>Quick log</div>
+                    <div style={{ color: "#7c5c7a", fontSize: 12, marginTop: 4 }}>Fast enough to use consistently</div>
+                    <div style={{ display: "flex", gap: 8, marginTop: 12, flexWrap: "wrap" }}>
+                      {["Dairy", "Caffeine", "Gluten"].map((tag) => (
+                        <span key={tag} style={{ ...styles.chip, background: "#fff7fb", color: "#9d3f6b" }}>
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+                  <div style={styles.visualCard}>
+                    <div style={{ fontWeight: 800, fontSize: 15 }}>Trend preview</div>
+                    <div style={{ color: "#7c5c7a", fontSize: 12, marginTop: 4 }}>
+                      A simple signal that helps users see patterns instead of guessing
+                    </div>
+                    <div style={{ display: "flex", alignItems: "end", gap: 8, height: 78, marginTop: 14 }}>
+                      {[32, 54, 28, 66, 40, 22].map((height, idx) => (
+                        <div
+                          key={idx}
+                          style={{
+                            flex: 1,
+                            borderRadius: 10,
+                            height,
+                            background: idx === 3 ? "linear-gradient(180deg, #f472b6 0%, #c084fc 100%)" : "#e9d5ff",
+                          }}
+                        />
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={styles.visualCard}>
+                    <div style={{ fontWeight: 800, fontSize: 15 }}>Weekly summary</div>
+                    <div style={{ color: "#7c5c7a", fontSize: 12, marginTop: 4 }}>A low-stress way to review patterns</div>
+                    <div style={{ marginTop: 12, borderRadius: 12, background: "#faf7ff", padding: 10, color: "#6b5b95", fontSize: 12, lineHeight: 1.6 }}>
+                      3 flare-ups this week, dairy showed up in 2 of them, caffeine appeared once, and lunch tended to be the most common symptom window.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       <div style={styles.footerPad} />
     </div>
