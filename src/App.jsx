@@ -606,7 +606,7 @@ export default function App() {
           </div>
           <h1 style={styles.heroTitle}>Kamryn</h1>
           <p style={styles.heroSubtitle}>
-            <span style={{ fontWeight: 800, color: "#1f2440" }}>Systems Engineer @ Disney, moving into Product</span>
+            <span style={{ fontWeight: 800, color: "#1f2440" }}>Product-Oriented Systems Engineer @ Disney</span>
           </p>
           <p style={styles.heroBlurb}>
             I currently work in Disney technology, where a lot of my day-to-day sits between execution and product thinking. I enjoy translating complex and ambiguous initiatives into clear priorities, aligned stakeholders, and outcomes that are easy to understand and execute against. While my current title is Systems Engineer, I’m intentionally building toward product by showcasing how I think about users, structure ideas, and shape solutions.
