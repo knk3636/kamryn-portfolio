@@ -1,5 +1,3 @@
-const PROFILE_IMAGE_SRC = `${import.meta.env.BASE_URL}kamimg.png`;
-
 const styles = {
   page: {
     minHeight: "100vh",
