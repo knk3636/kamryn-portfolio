@@ -533,7 +533,7 @@ export default function App() {
       id: "ibs",
       tag: project.subtitle,
       title: project.title,
-      blip: "Quick meal and symptom logging with timeline-based insights to identify IBS triggers.",
+      blip: "Led concept development of an IBS tracking app,defined requirements, prioritized features, and structured an MVP focused on user pain points and consistency.",
       chips: project.skills.slice(0, 3),
       icon: <UtensilsIcon size={20} />,
     },
@@ -541,7 +541,7 @@ export default function App() {
       id: "intake",
       tag: "Workflow / Internal Tool",
       title: "Monitoring Intake Redesign",
-      blip: "Simplified intake routing across pods with clearer ownership and fewer misroutes.",
+      blip: "Coordinated redesign of intake routing across pods, improving ownership clarity and reducing misrouted requests through structured workflows.",
       chips: ["UX Clarity", "Routing Logic", "Stakeholder Alignment"],
       icon: <BarIcon size={20} />,
     },
@@ -549,7 +549,7 @@ export default function App() {
       id: "newsletter",
       tag: "Communication / Product Ops",
       title: "Commerce Collective Newsletter",
-      blip: "Weekly digest to surface pod work, drive visibility, and align stakeholders.",
+      blip: "Led creation of a weekly digest to align stakeholders and increase visibility into pod work, improving cross-team awareness and communication.",
       chips: ["Storytelling", "Stakeholder Alignment", "Ops"],
       icon: <SparklesIcon size={20} />,
     },
@@ -557,7 +557,7 @@ export default function App() {
       id: "observability",
       tag: "Platform / Strategy",
       title: "Observability Roadmap",
-      blip: "Defined a phased approach to OTEL, SLOs, and standardized monitoring across apps.",
+      blip: "Defined and tracked a phased roadmap for observability improvements, aligning teams on priorities, metrics, and delivery milestones.",
       chips: ["Roadmapping", "Metrics", "Platform"],
       icon: <ClockIcon size={20} />,
     },
@@ -606,10 +606,10 @@ export default function App() {
           </div>
           <h1 style={styles.heroTitle}>Kamryn</h1>
           <p style={styles.heroSubtitle}>
-            <span style={{ fontWeight: 800, color: "#1f2440" }}>Product-Oriented Systems Engineer @ Disney</span>
+            <span style={{ fontWeight: 800, color: "#1f2440" }}>Project-Oriented Systems Engineer | Driving Cross-Functional Delivery @ Disney</span>
           </p>
           <p style={styles.heroBlurb}>
-            I currently work in Disney technology, where a lot of my day-to-day sits between execution and product thinking. I enjoy translating complex and ambiguous initiatives into clear priorities, aligned stakeholders, and outcomes that are easy to understand and execute against. While my current title is Systems Engineer, I’m intentionally building toward product by showcasing how I think about users, structure ideas, and shape solutions.
+            I work at the intersection of execution and product thinking, coordinating cross-functional efforts, defining clear deliverables, and driving work to completion. I focus on bringing structure to complex initiatives while ensuring outcomes are aligned with both user needs and business goals.
           </p>
           <div style={styles.socialRow}>
             <SocialLink href="mailto:kamrynkopchinski@gmail.com" label="Email">
@@ -628,11 +628,25 @@ export default function App() {
       <section id="about" style={styles.section}>
         <h2 style={styles.sectionTitle}>About Me</h2>
         <p style={styles.sectionLead}>
-          I currently work within Disney technology, partnering across engineering and leadership to bring structure, clarity, and momentum to complex work. A lot of what I enjoy most sits at the intersection of product thinking, communication, and execution, breaking down complex problems, identifying the underlying need, and shaping them into solutions that are more useful, actionable, and aligned across teams.
+          I work within Disney technology, partnering across engineering and leadership to bring structure, clarity, and momentum to complex initiatives. My day-to-day focuses on planning, coordination, and delivery,ensuring work is clearly defined, tracked, and executed across teams.
         </p>
         <p style={styles.sectionLead}>
-          I’m especially drawn to digital products that feel thoughtful, intuitive, and genuinely supportive to the people using them. This IBS-friendly tracker concept is one example of how I like to think: start with a real user pain point, define the simplest valuable version, and then build from there.
+          I’m especially interested in roles where strong execution and communication are critical, while also bringing product thinking to improve outcomes, user experience, and long-term scalability.
         </p>
+      </section>
+
+      <div style={styles.divider} />
+
+      <section id="how" style={styles.section}>
+        <h2 style={styles.sectionTitle}>How I Work</h2>
+        <p style={styles.sectionLead}>
+          Coordinate cross-functional teams to deliver projects on time, translate complex technical work into clear deliverables, track risks and dependencies, and communicate progress to stakeholders and leadership.
+        </p>
+        <div style={styles.skillsWrap}>
+          {["Project coordination","Cross-functional delivery","Dependency tracking","Risk management","Stakeholder communication","Timeline management","Process improvement","Data-informed decisions"].map((item)=> (
+            <span key={item} style={styles.chip}>{item}</span>
+          ))}
+        </div>
       </section>
 
       <div style={styles.divider} />
@@ -640,7 +654,7 @@ export default function App() {
       <section id="projects" style={styles.section}>
         <h2 style={styles.sectionTitle}>Projects</h2>
         <p style={styles.sectionLead}>
-          A selection of product concepts and work samples. Each card is a quick preview, and I’m happy to dive deeper in conversation.
+          A selection of work that highlights how I plan, coordinate, and deliver projects,while incorporating product thinking to improve outcomes.
         </p>
 
         <div style={styles.projectsGrid}>
