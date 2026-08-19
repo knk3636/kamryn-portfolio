@@ -644,7 +644,7 @@ export default function App() {
           I bring structure to complex product work by translating business needs into clear requirements, collaborating closely with engineering and stakeholders, prioritizing work based on value and dependencies, and keeping teams aligned throughout delivery.
         </p>
         <div style={styles.skillsWrap}>
-          {["Product Thinking", "Backlog Management", "User Stories & Acceptance Criteria", "Prioritization", "Stakeholder Alignment", "Cross-Functional Collaboration", "Agile Delivery", "Requirements Translation"]].map((item)=> (
+          {["Product Thinking", "Backlog Management", "User Stories & Acceptance Criteria", "Prioritization", "Stakeholder Alignment", "Cross-Functional Collaboration", "Agile Delivery", "Requirements Translation"]}.map((item)=> (
             <span key={item} style={styles.chip}>{item}</span>
           ))}
         </div>
