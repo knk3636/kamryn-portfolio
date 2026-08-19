@@ -30,8 +30,18 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Repair accidental JSX line
-        run: sed -i '/^[[:space:]]*([[:space:]]*$/d' src/App.jsx
+      - name: Apply portfolio content fixes
+        run: |
+          sed -i '/^[[:space:]]*([[:space:]]*$/d' src/App.jsx
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('src/App.jsx')
+          s = p.read_text()
+          s = s.replace('https://www.github.com', 'https://github.com/knk3636')
+          s = s.replace('A selection of work that highlights how I plan, coordinate, and deliver projects,while incorporating product thinking to improve outcomes.', 'A selection of work that highlights how I approach product problems, collaborate across teams, and turn ideas and requirements into meaningful outcomes.')
+          s = s.replace('Led concept development of an IBS tracking app,defined requirements, prioritized features, and structured an MVP focused on user pain points and consistency.', 'Led concept development of an IBS tracking app, defined requirements, prioritized features, and structured an MVP focused on user pain points and consistency.')
+          p.write_text(s)
+          PY
 
       - name: Build
         run: npm run build
