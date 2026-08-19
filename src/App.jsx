@@ -525,7 +525,8 @@ export default function App() {
 
   const certifications = [
     "Certified ScrumMaster (CSM)",
-    "Project Management Professional (PMP), exam scheduled June 2026",
+    "Certified Product Owner (CSPO)",
+    "Project Management Professional (PMP)",
   ];
 
   const projectCards = [
@@ -606,10 +607,10 @@ export default function App() {
           </div>
           <h1 style={styles.heroTitle}>Kamryn</h1>
           <p style={styles.heroSubtitle}>
-            <span style={{ fontWeight: 800, color: "#1f2440" }}>Project-Oriented Systems Engineer | Driving Cross-Functional Delivery @ Disney</span>
+            <span style={{ fontWeight: 800, color: "#1f2440" }}>Product Owner | Product & Technology </span>
           </p>
           <p style={styles.heroBlurb}>
-            I work at the intersection of execution and product thinking, coordinating cross-functional efforts, defining clear deliverables, and driving work to completion. I focus on bringing structure to complex initiatives while ensuring outcomes are aligned with both user needs and business goals.
+            I'm a Product Owner with experience across product delivery, technology, and digital experiences. I partner with business and technical teams to translate needs into actionable product work, bring clarity to complex initiatives, and support solutions that align with both user needs and business goals.
           </p>
           <div style={styles.socialRow}>
             <SocialLink href="mailto:kamrynkopchinski@gmail.com" label="Email">
@@ -628,10 +629,10 @@ export default function App() {
       <section id="about" style={styles.section}>
         <h2 style={styles.sectionTitle}>About Me</h2>
         <p style={styles.sectionLead}>
-          I work within Disney technology, partnering across engineering and leadership to bring structure, clarity, and momentum to complex initiatives. My day-to-day focuses on planning, coordination, and delivery,ensuring work is clearly defined, tracked, and executed across teams.
+          I’m currently a Product Owner at AssistRx, where I partner with Product Managers, engineers, and business stakeholders to translate business needs into actionable product work, refine and prioritize backlogs, and support the delivery of patient experience initiatives.
         </p>
         <p style={styles.sectionLead}>
-          I’m especially interested in roles where strong execution and communication are critical, while also bringing product thinking to improve outcomes, user experience, and long-term scalability.
+          Previously, I spent three years with The Walt Disney Company supporting technology behind Disney commerce experiences. My background has given me a unique perspective across both technology and product, and I’m especially passionate about creating thoughtful digital experiences, solving user problems, and bringing cross-functional teams together around shared goals.
         </p>
       </section>
 
@@ -640,10 +641,10 @@ export default function App() {
       <section id="how" style={styles.section}>
         <h2 style={styles.sectionTitle}>How I Work</h2>
         <p style={styles.sectionLead}>
-          Coordinate cross-functional teams to deliver projects on time, translate complex technical work into clear deliverables, track risks and dependencies, and communicate progress to stakeholders and leadership.
+          I bring structure to complex product work by translating business needs into clear requirements, collaborating closely with engineering and stakeholders, prioritizing work based on value and dependencies, and keeping teams aligned throughout delivery.
         </p>
         <div style={styles.skillsWrap}>
-          {["Project coordination","Cross-functional delivery","Dependency tracking","Risk management","Stakeholder communication","Timeline management","Process improvement","Data-informed decisions"].map((item)=> (
+          {\["Product Thinking", "Backlog Management", "User Stories & Acceptance Criteria", "Prioritization", "Stakeholder Alignment", "Cross-Functional Collaboration", "Agile Delivery", "Requirements Translation"]].map((item)=> (
             <span key={item} style={styles.chip}>{item}</span>
           ))}
         </div>
